@@ -88,8 +88,8 @@ $("#search").on("click" , function(){
     (`
          <div class="container w-75 ">
             <div class="row py-4 ">
-                <div class="search col-md-6 mb-sm-3">
-                    <input type="text" class="form-control  bg-transparent name-search " placeholder="Search By Name">
+                <div class="search col-md-6 ">
+                    <input type="text" class="form-control  bg-transparent name-search  mb-sm-3" placeholder="Search By Name">
                 </div>
 
                 <div class="search col-md-6 ">
@@ -538,7 +538,7 @@ function displayMealsByIngredients(meals) {
 
 async function getMealsByName(name){
 
-    let response = await fetch(`https:/www.themealdb.com/api/json/v1/1/search.php?s=${name}`);
+    let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`);
     let data = await response.json()
     let {meals} =data
     data.meals? displayMeals(meals) : displayMeals([])
@@ -550,7 +550,7 @@ async function getMealsByName(name){
 
 async function getMealsByFirstLetter(letter){
 
-    let response = await fetch(`https:/www.themealdb.com/api/json/v1/1/search.php?f=${letter}`);
+    let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`);
     let data = await response.json()
     let {meals} =data
     data.meals? displayMeals(meals) : displayMeals([])
