@@ -1,0 +1,87 @@
+body,
+.side-nav 
+{
+    background-color: black;
+    color: #fff !important;
+    overflow: hidden;
+}
+
+
+.side-nav{
+    z-index: 99999;
+} 
+
+.logo{
+    width: 40px;
+}
+
+i , li{
+    cursor: pointer;
+}
+
+
+.meal-layer{
+    width: 89% ;
+    height: 99%;
+    background-color:#ffffff8e;
+    top: 100%;
+    transition: .5s;
+  
+}
+.meal:hover .meal-layer{
+    top: 0px;
+    
+}
+
+
+/* search */
+::placeholder{
+    color:#f1f1f197 !important;
+    font-weight: 300 ;
+    font-size: small !important;
+}
+
+.form-control:focus{
+    
+    color:#f1f1f1;
+    font-size: small;
+}
+
+/* contact */
+.contact input::placeholder{
+    color:#000000a7 !important;
+    font-weight: 500 !important ;
+    font-size: small !important;
+}
+
+.contact .form-control:focus{
+    
+    color:black;
+    font-size: small;
+}
+
+.error{
+    font-size: 14px;
+    color: black;
+    font-family: "PT Sans Caption", sans-serif;
+    background-color:violet;
+    
+}
+
+.error::before{
+    content:"*";
+}
+
+/* loading screen */
+.loading-screen{
+    z-index: 99999999;
+    display: flex;
+    
+}
+
+.inner-loading-screen{
+    position: absolute;
+    z-index: 9;
+    background-color: #0D0D0D;
+    display: flex;
+}
