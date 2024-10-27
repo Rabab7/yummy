@@ -31,7 +31,7 @@ $(".nav-header > i").on("click" , function(){
 // displayMeals
 
 async function getMeals(){
-    let response = await fetch(`https:/www.themealdb.com/api/json/v1/1/search.php?s=`);
+    let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=`);
     let data = await response.json()
     let {meals} =data
     displayMeals(meals)
@@ -219,7 +219,7 @@ function dispalyAreas(meals){
 
         areaHtml += 
         `
-          <div class="meal col-md-3  position-relative overflow-hidden rounded-3 ps-5 d-flex flex-row flex-wrap  my-3  ">
+          <div class="meal col-md-3  position-relative overflow-hidden rounded-3 ps-5 d-flex flex-row flex-sm-column my-3  ">
              <div class="d-flex flex-column">
                  <i class="fa-solid fa-house-laptop fa-4x"></i>
                    
