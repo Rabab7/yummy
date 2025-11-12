@@ -50,9 +50,7 @@ function displayMeals (meals){
                     <div class="meal-layer position-absolute text-black d-flex align-items-center ">
                              <div class="px-1">
                                   <h2>${meals[i].strMeal}</h2>
-                                  <h6 class="d-none">${meals[i].idMeal}</h6>
-                                 
-           
+                                  <h6 class="d-none">${meals[i].idMeal}</h6>  
                               </div>
                     </div>
 
@@ -86,7 +84,7 @@ $("#search").on("click" , function(){
     $("body .meals").html("");
     $("body .search").html
     (`
-         <div class="container w-75 ">
+         <div class="container w-75 d-flex ">
             <div class="row py-4 ">
                 <div class="search col-md-6 ">
                     <input type="text" class="form-control  bg-transparent name-search  mb-sm-3" placeholder="Search By Name">
@@ -516,7 +514,7 @@ function displayMealsByIngredients(meals) {
                 <img src="${meals[i].strMealThumb}" class="w-100" alt="">
                 <div class="meal-layer position-absolute text-black d-flex align-items-center">
                     <div class="px-1">
-                        <h2>${meals[i].strMeal}</h2>
+                        <h2 class="">${meals[i].strMeal}</h2>
                         <h6 class="d-none">${meals[i].idMeal}</h6>
                     </div>
                 </div>
@@ -581,8 +579,8 @@ function displayMealDetails(meals) {
         <div class="col-md-8 py-5 ">
             <h2 class="px-4">Instructions</h2>
             <p class="h4 px-4">${meals[i].strInstructions}</p>
-            <h3><span class="fw-bolder h4 px-4">Area: </span>${meals[i].strArea}</h3>
-            <h3><span class="fw-bolder h4 px-4">Category: </span>${meals[i].strCategory}</h3>
+            <h3><span class="fw-bolder h4 px-4">Area:</span>${meals[i].strArea}</h3>
+            <h3><span class="fw-bolder h4 ms-0 px-4">Category:</span>${meals[i].strCategory}</h3>
             
             <div class="mt-5 px-4">
                <a target="_blank" href="${meals[i].strSource}" class="btn btn-success ">Source</a>
